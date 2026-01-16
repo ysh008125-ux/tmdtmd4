@@ -1,0 +1,113 @@
+@prefix ex: <http://example.org/achievement/> .
+@prefix schema: <https://schema.org/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+#################################################################
+# Subjects
+#################################################################
+
+ex:KoreanLanguage
+    rdf:type schema:EducationalOccupationalProgram ;
+    schema:name "국어"@ko ;
+    schema:educationalLevel "초등학교"@ko .
+
+ex:Mathematics
+    rdf:type schema:EducationalOccupationalProgram ;
+    schema:name "수학"@ko ;
+    schema:educationalLevel "초등학교"@ko .
+
+ex:EnglishLiterature
+    rdf:type schema:EducationalOccupationalProgram ;
+    schema:name "영어 문학"@ko ;
+    schema:educationalLevel "초등학교"@ko .
+
+ex:IntegratedSocialStudies
+    rdf:type schema:EducationalOccupationalProgram ;
+    schema:name "통합사회"@ko ;
+    schema:educationalLevel "초등학교"@ko .
+
+#################################################################
+# Example Learning Resources (Internet Files)
+#################################################################
+
+ex:LanguageHistoryVideo
+    rdf:type schema:LearningResource ;
+    schema:name "언어의 변화와 국어 생활 영상"@ko ;
+    schema:learningResourceType "동영상"@ko ;
+    schema:url <https://example.org/resource/korean-language-history> .
+
+ex:StandardPronunciationPDF
+    rdf:type schema:LearningResource ;
+    schema:name "표준 발음 학습 자료(PDF)"@ko ;
+    schema:learningResourceType "PDF"@ko ;
+    schema:url <https://example.org/resource/standard-pronunciation.pdf> .
+
+ex:FractionCalculationInteractive
+    rdf:type schema:LearningResource ;
+    schema:name "분수 연산 인터랙티브 학습"@ko ;
+    schema:learningResourceType "인터랙티브 콘텐츠"@ko ;
+    schema:url <https://example.org/resource/fraction-interactive> .
+
+ex:LiteratureAnalysisVideo
+    rdf:type schema:LearningResource ;
+    schema:name "문학 작품 분석 수업 영상"@ko ;
+    schema:learningResourceType "동영상"@ko ;
+    schema:url <https://example.org/resource/literature-analysis> .
+
+ex:CapitalismHistoryWeb
+    rdf:type schema:LearningResource ;
+    schema:name "자본주의의 역사와 특징 웹 자료"@ko ;
+    schema:learningResourceType "웹 문서"@ko ;
+    schema:url <https://example.org/resource/capitalism-history> .
+
+#################################################################
+# Achievement Standards – Korean
+#################################################################
+
+ex:AS_12화언01_01
+    rdf:type ex:AchievementStandard ;
+    schema:identifier "12화언01-01" ;
+    schema:description "언어를 인간의 삶과 관련지어 이해하고 국어의 변화 양상을 분석한다."@ko ;
+    schema:inDefinedTermSet ex:KoreanLanguage ;
+    schema:educationalAlignment ex:LanguageHistoryVideo .
+
+ex:AS_12화언01_02
+    rdf:type ex:AchievementStandard ;
+    schema:identifier "12화언01-02" ;
+    schema:description "표준 발음을 이해하고 정확하게 발음한다."@ko ;
+    schema:inDefinedTermSet ex:KoreanLanguage ;
+    schema:educationalAlignment ex:StandardPronunciationPDF .
+
+#################################################################
+# Achievement Standards – Mathematics
+#################################################################
+
+ex:AS_6수01_08
+    rdf:type ex:AchievementStandard ;
+    schema:identifier "6수01-08" ;
+    schema:description "분모가 다른 분수의 덧셈과 뺄셈의 계산 원리를 탐구한다."@ko ;
+    schema:inDefinedTermSet ex:Mathematics ;
+    schema:educationalAlignment ex:FractionCalculationInteractive .
+
+#################################################################
+# Achievement Standards – English Literature
+#################################################################
+
+ex:AS_12영문01_04
+    rdf:type ex:AchievementStandard ;
+    schema:identifier "12영문01-04" ;
+    schema:description "이야기나 희곡의 구조를 분석하여 구성 요소를 설명한다."@ko ;
+    schema:inDefinedTermSet ex:EnglishLiterature ;
+    schema:educationalAlignment ex:LiteratureAnalysisVideo .
+
+#################################################################
+# Achievement Standards – Integrated Social Studies
+#################################################################
+
+ex:AS_10통사2_03_01
+    rdf:type ex:AchievementStandard ;
+    schema:identifier "10통사2-03-01" ;
+    schema:description "자본주의의 전개 과정과 특징을 조사하고 삶의 방식을 비교 평가한다."@ko ;
+    schema:inDefinedTermSet ex:IntegratedSocialStudies ;
+    schema:educationalAlignment ex:CapitalismHistoryWeb .
